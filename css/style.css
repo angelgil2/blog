@@ -1,0 +1,131 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* Optimizar para dispositivos móviles */
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: all 0.8s ease-in-out;
+    overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento en navegadores WebKit (Chrome, Safari) */
+}
+section {
+    scroll-snap-align: start;
+    height: 100vh;
+    padding-top: 120px; /* Adjust padding to avoid overlap with navbar */
+}
+/* Barra de navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #d1d1d1;
+    padding: 1rem;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+.navbar img {
+    height: 80px;
+}
+.navbar-links {
+    display: flex;
+    flex-wrap: wrap;
+}
+.navbar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 0 15px;
+}
+.navbar a:hover {
+    text-decoration: underline;
+}
+/* Responsive Navbar */
+.navbar-toggle {
+    display: none;
+    background-color: #868e97;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+.navbar-toggle:hover {
+    background-color: #003f8c;
+}
+.navbar-links {
+    display: flex;
+}
+.titulo {
+    text-align: center;
+}
+.titulo1 {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    font-size: 1.25em;
+}
+#Inicio, #Historia, #Inventores, #Impacto, #Evolucion {
+    width: 100%;
+    height: 100%;
+}
+.autor {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.autor img {
+    width: 15%;
+}
+.autor p{
+    font-weight: bold;
+}
+footer {
+    background-color: #333333d8;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer p {
+    margin: 0.5rem 0;
+}
+@media (max-width: 600px) {
+    .navbar-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+    .navbar-links a {
+      padding: 10px;
+      text-align: center;
+      border-top: 1px solid white;
+    }
+    .navbar-links.active {
+      display: flex;
+    }
+    .navbar-toggle {
+      display: block;
+    }
+    .titulo {
+      display: none;
+    }
+}
+@media (max-width: 400px) {
+    .navbar img {
+      display: none;
+    }
+}
