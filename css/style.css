@@ -23,6 +23,35 @@ section {
     height: 100vh;
     padding-top: 120px; /* Adjust padding to avoid overlap with navbar */
 }
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #d1d1d1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+  }
+
+  .dropdown-content a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  /* Mostrar el contenido desplegable */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 /* Barra de navegación */
 .navbar {
     position: fixed;
@@ -72,7 +101,7 @@ section {
 }
 .titulo1 {
     text-align: center;
-    width: 80%;
+    width: 50%;
     margin: auto;
     font-size: 1.25em;
 }
@@ -104,25 +133,91 @@ footer {
 footer p {
     margin: 0.5rem 0;
 }
+.message {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    width: 250px;
+    padding: 15px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  /* Barra de progreso */
+  .progress-bar {
+    height: 4px;
+    background-color: #28a745;
+    width: 100%;
+    transition: width 5s linear;
+  }
+
+  /* Icono de check */
+  .check-icon {
+    display: none;
+    color: #28a745;
+    font-size: 2em;
+    text-align: center;
+  }
+  .titulo2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+  }
 @media (max-width: 700px) {
-    .navbar-links {
-      display: none;
-      flex-direction: column;
-      width: 100%;
+
+  
+      .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+  
+      .navbar-links a {
+        padding: 10px;
+        text-align: center;
+        border-top: 1px solid white;
+        background-color: #e3dfdfc7;
+      }
+      .titulo1{
+        width: 80%;
+      }
+  
+      .navbar-links.active {
+        display: flex;
+      }
+  
+      .navbar-toggle {
+        display: block;
+      }
+  
+      .message {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10px;
+        width: 90%;
+        font-size: 0.9em;
+        text-align: center;
+      }
     }
-    .navbar-links a {
-      padding: 10px;
-      text-align: center;
-      border-top: 1px solid white;
-      background-color:#e3dfdfc7;
+  
+    /* Mostrar mensaje */
+    .message.show {
+      opacity: 1;
     }
-    .navbar-links.active {
-      display: flex;
-    }
-    .navbar-toggle {
+  
+    /* Mostrar icono de check */
+    .check-icon.show {
       display: block;
-    }
-    
+      position: fixed;
+      left: 50%;
+      top: 20px;
+      transform: translateX(-50%);
     
 }
 

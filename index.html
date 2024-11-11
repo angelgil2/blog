@@ -5,24 +5,37 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <script src="script/app.js"></script>
   <title>La Maquina de Calculo</title>
 </head>
 <body>
-
   <!-- Barra de navegación -->
   <div class="navbar">
     <a href="index.html">
       <img src="img/logo.png" alt="Logo">
     </a>
+    <div class="message" id="message">
+      <p>Para desplazarse, use las flechas arriba y abajo o la barra de navegación.</p>
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+    
+    <div class="check-icon" id="check-icon">✅</div>
     
     <button class="navbar-toggle" onclick="toggleNavbar()">Menú</button>
     <div class="navbar-links">
         <a href="#Inicio">Inicio</a>
-        <a href="#Historia">Historia</a>
-        <a href="#Inventos">Principales Inventos</a>
+        <div class="dropdown">
+          <a href="#Historia">Historia V</a>
+          <div class="dropdown-content">
+            <a href="#Abaco">Ábaco</a>
+            <a href="#La Pascalina">La Pascalina</a>
+            <a href="#La Máquina Analítica">La Máquina Analítica</a>
+            <a href="#La Calculadora de Leibniz">La Calculadora de Leibniz</a>
+            <a href="#La Calculadora Electrónica">La Calculadora Electrónica</a>
+          </div>
+        </div>
         <a href="#Impacto">Impacto</a>
-        <a href="#Evolucion">Evolución</a>
-    </div>
+      </div>
   </div>
 
   <!-- Sección Inicio -->
@@ -31,96 +44,56 @@
       <div class="titulo">
         <h1>La Maquina de Calculo</h1>
       </div>
-      <div class="titulo1">Es un dispositivo diseñado para realizar operaciones matemáticas de forma automática. Los primeros ejemplos de estas máquinas fueron inventados para simplificar cálculos aritméticos complejos, y su evolución sentó las bases de la computación moderna.</div>
-      <div class="autor">
-        <img src="img/pascal.jpeg" alt="Pascal">
-        <p>Blaise Pascal</p>
-        <img src="img/charles.webp" alt="Charles Babbage">
-        <p>Charles Babbage</p>
-      </div>
+      <div class="titulo1">La "máquina de cálculo" es un término amplio que puede referirse a diversas herramientas y dispositivos a lo largo de la historia diseñados para realizar operaciones matemáticas. A continuación, te proporciono una visión general de algunas de las máquinas de cálculo más importantes, su evolución y sus fuentes históricas:</div>
     </div>
   </section>
 
   <!-- Sección Historia -->
-  <section id="Historia">
-    <h1>Historia de la Máquina de Cálculo</h1>
-    <p>Las primeras máquinas de cálculo surgieron en el siglo XVII, siendo la Pascalina de Blaise Pascal una de las más conocidas. Esta máquina permitía realizar sumas y restas de forma mecánica.</p>
+  <section>
+    <div class="titulo2">
+      <h1>Evolución</h1>
+    </div>
   </section>
 
   <!-- Sección Inventos (Acordeón) -->
-  <section id="Inventos">
-    <h1>Principales Inventos</h1>
-    <div class="accordion" id="accordionInventos">
-      <!-- Ábaco -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingAbaco">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAbaco" aria-expanded="true" aria-controls="collapseAbaco">
-            1. La Ábaco
-          </button>
-        </h2>
-        <div id="collapseAbaco" class="accordion-collapse collapse show" aria-labelledby="headingAbaco" data-bs-parent="#accordionInventos">
-          <div class="accordion-body">
-            El ábaco es una de las primeras herramientas de cálculo conocidas, utilizada desde la antigua Mesopotamia alrededor del 2300 a.C. Es un dispositivo mecánico que permite realizar operaciones matemáticas como sumas, restas, multiplicaciones y divisiones, moviendo cuentas a lo largo de barras o hilos.
-            <p><strong>Fuente:</strong> "The Abacus: The World's First Calculator", Britannica.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Pascalina -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingPascalina">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePascalina" aria-expanded="true" aria-controls="collapsePascalina">
-            2. La Pascalina
-          </button>
-        </h2>
-        <div id="collapsePascalina" class="accordion-collapse collapse" aria-labelledby="headingPascalina" data-bs-parent="#accordionInventos">
-          <div class="accordion-body">
-            La Pascalina, inventada por el matemático Blaise Pascal en 1642, es considerada una de las primeras calculadoras mecánicas. Este dispositivo podía realizar sumas y restas mediante ruedas dentadas que se movían de acuerdo a la cantidad de unidades.
-            <p><strong>Fuente:</strong> "Blaise Pascal and the Pascaline" en la Enciclopedia de Historia de la Ciencia.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Máquina Analítica de Babbage -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingBabbage">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBabbage" aria-expanded="true" aria-controls="collapseBabbage">
-            3. La Máquina Analítica de Charles Babbage
-          </button>
-        </h2>
-        <div id="collapseBabbage" class="accordion-collapse collapse" aria-labelledby="headingBabbage" data-bs-parent="#accordionInventos">
-          <div class="accordion-body">
-            Charles Babbage diseñó la máquina analítica en el siglo XIX, considerada el precursor de la computadora moderna. Usaba tarjetas perforadas y podía realizar cálculos matemáticos complejos, almacenar y procesar información.
-            <p><strong>Fuente:</strong> "The Analytical Engine: Charles Babbage's Computing Revolution", IEEE Annals of the History of Computing.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Calculadora de Leibniz -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingLeibniz">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLeibniz" aria-expanded="true" aria-controls="collapseLeibniz">
-            4. La Calculadora de Leibniz
-          </button>
-        </h2>
-        <div id="collapseLeibniz" class="accordion-collapse collapse" aria-labelledby="headingLeibniz" data-bs-parent="#accordionInventos">
-          <div class="accordion-body">
-            Gottfried Wilhelm Leibniz desarrolló una calculadora en 1673 que podía realizar multiplicaciones y divisiones, utilizando un sistema de engranajes. Es conocida como la "Stepped Reckoner" y es una de las primeras máquinas en usar mecanismos automáticos de desplazamiento.
-            <p><strong>Fuente:</strong> "Leibniz's Stepped Reckoner", en el Journal of the History of Ideas.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Calculadora Electrónica -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingElectronica">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseElectronica" aria-expanded="true" aria-controls="collapseElectronica">
-            5. La Calculadora Electrónica
-          </button>
-        </h2>
-        <div id="collapseElectronica" class="accordion-collapse collapse" aria-labelledby="headingElectronica" data-bs-parent="#accordionInventos">
-          <div class="accordion-body">
-            En 1937, Konrad Zuse construyó la Z3, considerada la primera computadora programable electrónica. A partir de ahí, las calculadoras electrónicas portátiles empezaron a ofrecer funciones avanzadas como raíces cuadradas y trigonometría.
-            <p><strong>Fuente:</strong> "The Z3 and Its Influence on the Development of Modern Computers", en IEEE Annals of the History of Computing.</p>
-          </div>
-        </div>
-      </div>
+  <section id="Abaco">
+    <div class="titulo">
+      <h1>Abaco</h1>
+    </div>
+    <div class="titulo1">
+      El ábaco es una de las primeras herramientas de cálculo conocidas, utilizada desde la antigua Mesopotamia alrededor del 2300 a.C. Es un dispositivo mecánico que permite realizar operaciones matemáticas como sumas, restas, multiplicaciones y divisiones, moviendo cuentas a lo largo de barras o hilos. El ábaco sigue siendo utilizado en algunas culturas como herramienta educativa y para realizar cálculos rápidos.
+    </div>
+  </section>
+  <section id="La Pascalina">
+    <div class="titulo">
+      <h1>La Pascalina</h1>
+    </div>
+    <div class="titulo1">
+      La Pascalina, inventada por el matemático y filósofo Blaise Pascal en 1642, es considerada una de las primeras calculadoras mecánicas. Este dispositivo, diseñado inicialmente para ayudar a su padre en su trabajo como recaudador de impuestos, podía realizar sumas y restas mediante ruedas dentadas que se movían de acuerdo a la cantidad de unidades.
+    </div>
+  </section>
+  <section id="La Máquina Analítica">
+    <div class="titulo">
+      <h1>La Máquina Analítica</h1>
+    </div>
+    <div class="titulo1">
+      Charles Babbage, un matemático británico del siglo XIX, es conocido por haber diseñado la máquina analítica, que es considerada el precursor de la computadora moderna. Esta máquina fue un dispositivo mecánico capaz de realizar cualquier cálculo matemático mediante el uso de tarjetas perforadas, con la capacidad de almacenar y procesar información, y podría ser programada para realizar tareas específicas. Aunque nunca fue completada en su época debido a limitaciones tecnológicas, la máquina analítica fue clave en el desarrollo de las computadoras modernas.
+    </div>
+  </section>
+  <section id="La Calculadora de Leibniz">
+    <div class="titulo">
+      <h1>La Calculadora de Leibniz</h1>
+    </div>
+    <div class="titulo1">
+      Gottfried Wilhelm Leibniz, filósofo y matemático alemán, desarrolló una máquina calculadora en 1673 que podía realizar multiplicaciones y divisiones. Su máquina, conocida como la Pascalina de Leibniz o "Stepped Reckoner", utilizaba un sistema de engranajes para realizar operaciones automáticas, y es una de las primeras máquinas en utilizar el concepto de un mecanismo de desplazamiento.
+    </div>
+  </section>
+  <section id="La Calculadora Electrónica">
+    <div class="titulo">
+      <h1>La Calculadora Electrónica</h1>
+    </div>
+    <div class="titulo1">
+      A lo largo del siglo XX, la tecnología de los cálculos mecánicos fue reemplazada gradualmente por dispositivos electrónicos. En 1937, Konrad Zuse, un ingeniero alemán, construyó la Z3, considerada la primera computadora programable electrónica. En la década de 1960, las calculadoras electrónicas portátiles empezaron a estar disponibles, ofreciendo funciones matemáticas avanzadas como raíces cuadradas, logaritmos y trigonometría.
     </div>
   </section>
 
