@@ -173,7 +173,7 @@ footer p {
     border-collapse: collapse;
     text-align: center;
     color: rgb(27, 27, 27);
-    background: linear-gradient(to right, green 50%, rgb(185, 107, 17) 50%);
+    background: linear-gradient(to right, rgb(0, 207, 0) 50%, rgb(206, 119, 19) 50%);
   }
   
   th {
