@@ -168,6 +168,25 @@ footer p {
     width: 30vh;
     margin: auto;
   }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    color: rgb(27, 27, 27);
+    background: linear-gradient(to right, green 50%, rgb(185, 107, 17) 50%);
+  }
+  
+  th {
+    width: 50%;
+  }
+  
+  td {
+    width: 50%;
+  }
+  
+  th, td {
+    padding: 10px;
+  }
 @media (max-width: 700px) {
 
   .autor img {
@@ -205,12 +224,7 @@ footer p {
         font-size: 0.9em;
         text-align: center;
       }
-      .ventajas {
-        order: 1;
-      }
-      .desventajas {
-        order: 2;
-      }
+      
     }
   
     .message.show {
