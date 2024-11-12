@@ -40,7 +40,6 @@
       </div>
   </div>
 
-  <!-- Sección Inicio -->
   <section id="Inicio">
     <div class="home">
       <div class="titulo">
@@ -51,10 +50,7 @@
       <img src="img/ilustración de calculadora dibujada a mano.jpg" alt="">
     </div>
     </div>
-    
   </section>
-
-  <!-- Sección Historia -->
   <section>
     <div class="titulo2">
       <h1>Evolución</h1>
@@ -63,8 +59,6 @@
       <img src="img/Pegatinas_ School Subject Maths.jpg" alt="" srcset="">
     </div>
   </section>
-
-  <!-- Sección Inventos (Acordeón) -->
   <section id="Abaco">
     <div class="titulo">
       <h1>Abaco</h1>
@@ -151,18 +145,16 @@
         </form>
     <script>
       (function(){
-          emailjs.init("G4Wblkz5pvb6_BSOW"); // Reemplaza con tu Public Key de EmailJS
+          emailjs.init("G4Wblkz5pvb6_BSOW"); 
       })();
     
       document.getElementById('afiliacionForm').addEventListener('submit', function(event) {
-          event.preventDefault(); // Evita el envío predeterminado
+          event.preventDefault(); 
     
-          // Obtiene los valores del formulario
           const nombre = document.getElementById('nombre').value;
           const email = document.getElementById('email').value;
           const comentario = document.getElementById('comentario').value;
     
-          // Envía el correo usando EmailJS
           emailjs.send('service_e5x1azk', 'template_6slugfm', {
               nombre: nombre,
               email: email,
@@ -177,7 +169,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>Angel Gil © 2024 | Todos los derechos reservados | Contacto: <a href="mailto:angelvelotax@gmail.com" style="color: white;">angelvelotax@gmail.com</a></p>
     <p>Teléfono: 313 5965832 | Whatsapp: 313 5965832 </p>

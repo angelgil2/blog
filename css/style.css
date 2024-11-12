@@ -8,7 +8,7 @@ html, body {
     width: 100%;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch; /* Optimizar para dispositivos móviles */
+    -webkit-overflow-scrolling: touch;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -16,12 +16,12 @@ html, body {
     overflow-y: scroll;
 }
 body::-webkit-scrollbar {
-    display: none; /* Oculta la barra de desplazamiento en navegadores WebKit (Chrome, Safari) */
+    display: none; 
 }
 section {
     scroll-snap-align: start;
     height: 100vh;
-    padding-top: 120px; /* Adjust padding to avoid overlap with navbar */
+    padding-top: 120px;
 }
 .dropdown {
     position: relative;
@@ -48,11 +48,11 @@ section {
     background-color: #ddd;
   }
 
-  /* Mostrar el contenido desplegable */
+
   .dropdown:hover .dropdown-content {
     display: block;
   }
-/* Barra de navegación */
+
 .navbar {
     position: fixed;
     top: 0;
@@ -80,7 +80,6 @@ section {
 .navbar a:hover {
     text-decoration: underline;
 }
-/* Responsive Navbar */
 .navbar-toggle {
     display: none;
     background-color: #868e97;
@@ -145,7 +144,6 @@ footer p {
     transition: opacity 0.5s ease-in-out;
   }
 
-  /* Barra de progreso */
   .progress-bar {
     height: 4px;
     background-color: #28a745;
@@ -153,7 +151,7 @@ footer p {
     transition: width 5s linear;
   }
 
-  /* Icono de check */
+
   .check-icon {
     display: none;
     color: #28a745;
@@ -172,7 +170,9 @@ footer p {
   }
 @media (max-width: 700px) {
 
-  
+  .autor img {
+    width: 45%;
+}
       .navbar-links {
         display: none;
         flex-direction: column;
@@ -207,12 +207,10 @@ footer p {
       }
     }
   
-    /* Mostrar mensaje */
     .message.show {
       opacity: 1;
     }
-  
-    /* Mostrar icono de check */
+
     .check-icon.show {
       display: block;
       position: fixed;
