@@ -205,6 +205,12 @@ footer p {
         font-size: 0.9em;
         text-align: center;
       }
+      .ventajas {
+        order: 1;
+      }
+      .desventajas {
+        order: 2;
+      }
     }
   
     .message.show {
