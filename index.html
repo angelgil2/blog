@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <script src="script/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser/dist/email.min.js"></script>
   <title>La Maquina de Calculo</title>
 </head>
 <body>
@@ -35,6 +36,7 @@
           </div>
         </div>
         <a href="#Impacto">Impacto</a>
+        <a href="#Comentarios">Comentarios</a>
       </div>
   </div>
 
@@ -44,7 +46,7 @@
       <div class="titulo">
         <h1>La Maquina de Calculo</h1>
       </div>
-      <div class="titulo1">La "máquina de cálculo" es un término amplio que puede referirse a diversas herramientas y dispositivos a lo largo de la historia diseñados para realizar operaciones matemáticas. A continuación, te proporciono una visión general de algunas de las máquinas de cálculo más importantes, su evolución y sus fuentes históricas:</div>
+      <div class="titulo1">La "máquina de cálculo" es un término amplio que puede referirse a diversas herramientas y dispositivos a lo largo de la historia diseñados para realizar operaciones matemáticas. Algunas de las máquinas de cálculo más importantes y su evolución histórica:</div>
     </div>
   </section>
 
@@ -63,6 +65,9 @@
     <div class="titulo1">
       El ábaco es una de las primeras herramientas de cálculo conocidas, utilizada desde la antigua Mesopotamia alrededor del 2300 a.C. Es un dispositivo mecánico que permite realizar operaciones matemáticas como sumas, restas, multiplicaciones y divisiones, moviendo cuentas a lo largo de barras o hilos. El ábaco sigue siendo utilizado en algunas culturas como herramienta educativa y para realizar cálculos rápidos.
     </div>
+    <div class="autor">
+      <img src="img/abaco.jpg" alt="">
+    </div>
   </section>
   <section id="La Pascalina">
     <div class="titulo">
@@ -70,6 +75,9 @@
     </div>
     <div class="titulo1">
       La Pascalina, inventada por el matemático y filósofo Blaise Pascal en 1642, es considerada una de las primeras calculadoras mecánicas. Este dispositivo, diseñado inicialmente para ayudar a su padre en su trabajo como recaudador de impuestos, podía realizar sumas y restas mediante ruedas dentadas que se movían de acuerdo a la cantidad de unidades.
+    </div>
+    <div class="autor">
+      <img src="img/pascalina.jpg" alt="">
     </div>
   </section>
   <section id="La Máquina Analítica">
@@ -79,6 +87,9 @@
     <div class="titulo1">
       Charles Babbage, un matemático británico del siglo XIX, es conocido por haber diseñado la máquina analítica, que es considerada el precursor de la computadora moderna. Esta máquina fue un dispositivo mecánico capaz de realizar cualquier cálculo matemático mediante el uso de tarjetas perforadas, con la capacidad de almacenar y procesar información, y podría ser programada para realizar tareas específicas. Aunque nunca fue completada en su época debido a limitaciones tecnológicas, la máquina analítica fue clave en el desarrollo de las computadoras modernas.
     </div>
+    <div class="autor">
+      <img src="img/analitica.webp" alt="">
+    </div>
   </section>
   <section id="La Calculadora de Leibniz">
     <div class="titulo">
@@ -87,6 +98,9 @@
     <div class="titulo1">
       Gottfried Wilhelm Leibniz, filósofo y matemático alemán, desarrolló una máquina calculadora en 1673 que podía realizar multiplicaciones y divisiones. Su máquina, conocida como la Pascalina de Leibniz o "Stepped Reckoner", utilizaba un sistema de engranajes para realizar operaciones automáticas, y es una de las primeras máquinas en utilizar el concepto de un mecanismo de desplazamiento.
     </div>
+    <div class="autor">
+      <img src="img/leibniz.jpg" alt="">
+    </div>
   </section>
   <section id="La Calculadora Electrónica">
     <div class="titulo">
@@ -94,6 +108,65 @@
     </div>
     <div class="titulo1">
       A lo largo del siglo XX, la tecnología de los cálculos mecánicos fue reemplazada gradualmente por dispositivos electrónicos. En 1937, Konrad Zuse, un ingeniero alemán, construyó la Z3, considerada la primera computadora programable electrónica. En la década de 1960, las calculadoras electrónicas portátiles empezaron a estar disponibles, ofreciendo funciones matemáticas avanzadas como raíces cuadradas, logaritmos y trigonometría.
+    </div>
+    <div class="autor">
+      <img src="img/electronica.jpg" alt="">
+    </div>
+  </section>
+  <section id="Impacto">
+    <div class="titulo">
+      <h1>Impacto</h1>
+    </div>
+    <div class="titulo1">
+      Las máquinas de cálculo han tenido un impacto transformador en el mundo, acelerando avances en la ciencia, investigación y tecnología. Han facilitado la automatización de procesos, mejorando la eficiencia y reduciendo costos en diversas industrias. También han revolucionado el acceso a la información, impulsado el desarrollo de tecnologías como la inteligencia artificial y la computación en la nube, y mejorado la productividad. Además, han democratizado el acceso a herramientas antes exclusivas, cambiando el mercado laboral y transformando la cultura y la sociedad, con efectos profundos en la comunicación, educación y globalización.
+    </div>
+  </section>
+  <section id="Comentarios">
+    <div class="titulo">
+      <h1>Comentarios</h1>
+    </div>
+    <div class="titulo1">
+        <form id="afiliacionForm">
+            <div class="form-group">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label>Comentario</label> <br>
+                <textarea id="comentario" name="comentario"></textarea>
+            </div>
+    
+            <button type="submit" class="btn btn-primary btn-block">Enviar Comentario</button>
+        </form>
+    <script>
+      (function(){
+          emailjs.init("G4Wblkz5pvb6_BSOW"); // Reemplaza con tu Public Key de EmailJS
+      })();
+    
+      document.getElementById('afiliacionForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Evita el envío predeterminado
+    
+          // Obtiene los valores del formulario
+          const nombre = document.getElementById('nombre').value;
+          const email = document.getElementById('email').value;
+          const comentario = document.getElementById('comentario').value;
+    
+          // Envía el correo usando EmailJS
+          emailjs.send('service_e5x1azk', 'template_6slugfm', {
+              nombre: nombre,
+              email: email,
+              comentario: comentario,
+          }).then(function() {
+              alert('Tu solicitud ha sido enviada. Gracias.');
+          }, function(error) {
+              alert('Error al enviar: ' + JSON.stringify(error));
+          });
+      });
+    </script>
     </div>
   </section>
 
